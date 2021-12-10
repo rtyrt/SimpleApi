@@ -17,7 +17,8 @@ namespace SimpleAPI.Tests
         public void GetReturnsCorrectNumber()
         {
             var returnValue = controller.Get(1);
-            Assert.Equal(1, returnValue.Value);
+            int checkVal = 1;
+            Assert.Equal(checkVal, returnValue.Value["id"]);
         }
     }
 }

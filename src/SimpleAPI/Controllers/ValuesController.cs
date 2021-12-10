@@ -19,9 +19,11 @@ namespace SimpleAPI.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Dictionary<string,int>> Get(int id)
         {
-            return  id;
+            Dictionary<string,int>myDictionary = new Dictionary<string,int>();
+            myDictionary.Add("id",id);
+            return myDictionary;
         }
 
         // POST api/values
